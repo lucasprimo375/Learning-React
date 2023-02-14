@@ -3,6 +3,7 @@ import AnotherComponent from './components/AnotherComponent';
 import Events from './components/Events';
 import MyComponent from './components/MyComponent';
 import MyTemplateExpression from './components/MyTemplateExpression';
+import Sum from './components/Sum';
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
       <AnotherComponent></AnotherComponent>
 
       <Events></Events>
+
+      <Sum></Sum>
     </div>
   );
 }
