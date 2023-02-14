@@ -1,5 +1,6 @@
 import './App.css';
 import AnotherComponent from './components/AnotherComponent';
+import Events from './components/Events';
 import MyComponent from './components/MyComponent';
 import MyTemplateExpression from './components/MyTemplateExpression';
 
@@ -13,6 +14,8 @@ function App() {
       <MyTemplateExpression></MyTemplateExpression>
 
       <AnotherComponent></AnotherComponent>
+
+      <Events></Events>
     </div>
   );
 }
