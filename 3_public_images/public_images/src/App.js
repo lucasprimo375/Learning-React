@@ -1,4 +1,5 @@
 import './App.css';
+import Payakan from "./assets/payakan.jpg"
 
 function App() {
   return (
@@ -7,6 +8,10 @@ function App() {
 
       <div>
         <img src="/avatar.jpg" alt="Avatar: The Way of Water poster" />
+      </div>
+
+      <div>
+        <img src={Payakan} alt="Payakan" />
       </div>
     </div>
   );
