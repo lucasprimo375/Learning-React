@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import ManageData from './components/ManageData';
+import ListRenderer from './components/ListRenderer';
 
 function App() {
   return (
@@ -21,6 +22,10 @@ function App() {
 
         <div>
           <ManageData></ManageData>
+        </div>
+
+        <div>
+          <ListRenderer></ListRenderer>
         </div>
       </header>
     </div>
