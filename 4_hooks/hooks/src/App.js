@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import ManageData from './components/ManageData';
 import ListRenderer from './components/ListRenderer';
+import ConditionalRenderer from './components/ConditionalRenderer';
 
 function App() {
   return (
@@ -26,6 +27,10 @@ function App() {
 
         <div>
           <ListRenderer></ListRenderer>
+        </div>
+
+        <div>
+          <ConditionalRenderer></ConditionalRenderer>
         </div>
       </header>
     </div>
