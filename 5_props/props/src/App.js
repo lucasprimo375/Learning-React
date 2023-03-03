@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import ShowUserName from './components/ShowUserName';
+import CarDetails from './components/CarDetails';
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
       </header>
 
       <ShowUserName name="Lucas"></ShowUserName>
+
+      <CarDetails brand="Fiat" km={1000}color="blue"></CarDetails>
     </div>
   );
 }
