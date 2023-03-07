@@ -4,6 +4,30 @@ import ShowUserName from './components/ShowUserName';
 import CarDetails from './components/CarDetails';
 
 function App() {
+  const cars  = [
+    {
+      id: 1,
+      brand: "Ferrari",
+      km: 100,
+      color: "black",
+      newCar: true
+    },
+    {
+      id: 2,
+      brand: "Kia",
+      km: 1000,
+      color: "black",
+      newCar: false
+    },
+    {
+      id: 3,
+      brand: "Camaro",
+      km: 0,
+      color: "yellow",
+      newCar: true
+    }
+  ]
+
   return (
     <div className="App">
       <header className="App-header">
@@ -25,6 +49,12 @@ function App() {
 
       <CarDetails brand="Fiat" km={1000} color="blue" newCar={true}></CarDetails>
       <CarDetails brand="Toyota" color="red" km={0} newCar={false}></CarDetails>
+
+      {
+        cars.map((car) => (
+          <CarDetails brand={car.brand} color={car.color} km={car.km} newCar={car.newCar}></CarDetails>
+        ))
+      }
     </div>
   );
 }
