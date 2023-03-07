@@ -3,6 +3,7 @@ import './App.css';
 import ShowUserName from './components/ShowUserName';
 import CarDetails from './components/CarDetails';
 import Fragments from './components/Fragments';
+import Container from './components/Container';
 
 function App() {
   const cars  = [
@@ -58,6 +59,10 @@ function App() {
       }
 
       <Fragments propFragment="Yet another title"></Fragments>
+
+      <Container someValue="something">
+        <p>This is the container content</p>
+      </Container>
     </div>
   );
 }
