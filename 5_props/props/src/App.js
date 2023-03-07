@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import ShowUserName from './components/ShowUserName';
 import CarDetails from './components/CarDetails';
+import Fragments from './components/Fragments';
 
 function App() {
   const cars  = [
@@ -55,6 +56,8 @@ function App() {
           <CarDetails brand={car.brand} color={car.color} km={car.km} newCar={car.newCar}></CarDetails>
         ))
       }
+
+      <Fragments propFragment="Yet another title"></Fragments>
     </div>
   );
 }
