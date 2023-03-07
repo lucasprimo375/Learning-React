@@ -23,7 +23,8 @@ function App() {
 
       <ShowUserName name="Lucas"></ShowUserName>
 
-      <CarDetails brand="Fiat" km={1000}color="blue"></CarDetails>
+      <CarDetails brand="Fiat" km={1000} color="blue" newCar={true}></CarDetails>
+      <CarDetails brand="Toyota" color="red" km={0} newCar={false}></CarDetails>
     </div>
   );
 }
