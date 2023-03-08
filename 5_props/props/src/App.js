@@ -4,6 +4,11 @@ import ShowUserName from './components/ShowUserName';
 import CarDetails from './components/CarDetails';
 import Fragments from './components/Fragments';
 import Container from './components/Container';
+import ExecuteFunction from './components/ExecuteFunction';
+
+function showMessage() {
+  console.log("This is the message")
+}
 
 function App() {
   const cars  = [
@@ -54,7 +59,7 @@ function App() {
 
       {
         cars.map((car) => (
-          <CarDetails brand={car.brand} color={car.color} km={car.km} newCar={car.newCar}></CarDetails>
+          <CarDetails brand={car.brand} color={car.color} km={car.km} newCar={car.newCar} key={car.id}></CarDetails>
         ))
       }
 
@@ -63,6 +68,8 @@ function App() {
       <Container someValue="something">
         <p>This is the container content</p>
       </Container>
+
+      <ExecuteFunction myFunction={showMessage}></ExecuteFunction>
     </div>
   );
 }
