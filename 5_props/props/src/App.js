@@ -5,6 +5,9 @@ import CarDetails from './components/CarDetails';
 import Fragments from './components/Fragments';
 import Container from './components/Container';
 import ExecuteFunction from './components/ExecuteFunction';
+import {useState} from "react"
+import Message from './components/Message';
+import ChangeMessageState from './components/ChangeMessageState';
 
 function showMessage() {
   console.log("This is the message")
@@ -34,6 +37,12 @@ function App() {
       newCar: true
     }
   ]
+
+  const [message, setMessage] = useState("")
+
+  const handleMessage = (msg) => {
+    setMessage(msg)
+  }
 
   return (
     <div className="App">
@@ -70,6 +79,10 @@ function App() {
       </Container>
 
       <ExecuteFunction myFunction={showMessage}></ExecuteFunction>
+
+      <Message msg={message}></Message>
+
+      <ChangeMessageState handleMessage={handleMessage}></ChangeMessageState>
     </div>
   );
 }
