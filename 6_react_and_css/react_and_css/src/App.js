@@ -4,6 +4,7 @@ import MyComponent from './components/MyComponent';
 function App() {
   const n = 15;
   const name = "Lucas"
+  const redTitle = false
 
   return (
     <div className="App">
@@ -20,6 +21,8 @@ function App() {
       <h2 style={n > 10 ? ({color: "purple"}) : ({color: "indigo"})}>Another dynamic CSS</h2>
 
       <h2 style={name === "Lucas" ? ({color: "magenta"}) : null}>One more dynamic CSS</h2>
+
+      <h2 className={redTitle ? "red-title" : "title"}>This title has dynamic CSS class</h2>
     </div>
   );
 }
