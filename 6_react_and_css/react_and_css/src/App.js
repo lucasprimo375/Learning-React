@@ -1,5 +1,6 @@
 import './App.css';
 import MyComponent from './components/MyComponent';
+import Title from './components/Title';
 
 function App() {
   const n = 15;
@@ -23,6 +24,8 @@ function App() {
       <h2 style={name === "Lucas" ? ({color: "magenta"}) : null}>One more dynamic CSS</h2>
 
       <h2 className={redTitle ? "red-title" : "title"}>This title has dynamic CSS class</h2>
+
+      <Title></Title>
     </div>
   );
 }
