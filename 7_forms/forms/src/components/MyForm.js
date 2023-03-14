@@ -1,12 +1,20 @@
 import "./MyForm.css"
+import {useState} from "react"
 
 const MyForm = () => {
-  return (
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+
+  const handleName = (e) => {
+    setName(e.target.value)
+  }
+  
+    return (
     <div>
         <form>
             <div>
                 <label htmlFor="name">Name:</label>
-                <input type="text" name="name" placeholder="Type your name" />
+                <input type="text" name="name" placeholder="Type your name" onChange={handleName}/>
             </div>
             <label>
                 <span>E-mail:</span>
