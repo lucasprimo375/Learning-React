@@ -4,7 +4,8 @@ import {useState} from "react"
 const MyForm = ({user}) => {
   const [name, setName] = useState(user ? user.name : "")
   const [email, setEmail] = useState(user ? user.email : "")
-  const [bio, setBio] = useState("");
+  const [bio, setBio] = useState(user ? user.bio : "");
+  const [role, setRole] = useState(user ? user.role : "");
 
   const handleName = (e) => {
     setName(e.target.value)
@@ -13,7 +14,7 @@ const MyForm = ({user}) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("sending the form")
-    console.log(name, email, bio);
+    console.log(name, email, bio, role);
 
     setName("");
     setEmail("");
@@ -34,6 +35,14 @@ const MyForm = ({user}) => {
             <label>
               <span>Biography:</span>
               <textarea name="bio" placeholder="User description" onChange={(e) => setBio(e.target.value)} value={bio}></textarea>
+            </label>
+            <label>
+              <span>Role:</span>
+              <select name="role" onChange={(e) => setRole(e.target.value)} value={role}>
+                <option value="user">User</option>
+                <option value="editor">Editor</option>
+                <option value="admin">Administrator</option>
+              </select>
             </label>
             <input type="submit" value="Send" />
         </form>
